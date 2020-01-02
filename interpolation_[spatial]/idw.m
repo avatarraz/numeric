@@ -1,4 +1,12 @@
-% IDW function by A.S.Munir
+% -------------------------------------------------------------------------
+% idw spatial interpolation function by A.S.Munir
+%
+% input : idw (x, y, z)
+% x, y, & z is nx1 same size grid dimension
+% 
+% output : [loc_x,loc_y,z_s]
+% loc_x, loc_y, z_s is nxr dimension matrix, suitable for contourf or else
+% -------------------------------------------------------------------------
 function [loc_x,loc_y,z_s] = idw(x,y,z)
     p=2;    % power for weight function
     dx=1;   % dx different

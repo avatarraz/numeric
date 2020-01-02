@@ -1,4 +1,13 @@
-% polinomia 1st order function by A.S.Munir
+% -------------------------------------------------------------------------
+% polinomial 1st order spatial interpolation function by A.S.Munir
+% equation y = a1 + a2*x + a3*y
+%
+% input : polinomial1st (x, y, z)
+% x, y, & z is nx1 same size grid dimension
+% 
+% output : [loc_x,loc_y,z_s]
+% loc_x, loc_y, z_s is nxr dimension matrix, suitable for contourf or else
+% -------------------------------------------------------------------------
 function [loc_x,loc_y,z_s] = polinomial1st(x,y,z)
     % parameter used, could be changged
     % x,y,z normalized value, 1 is unset, below 1 made value smaller,
