@@ -1,5 +1,5 @@
 % IDW function by A.S.Munir
-function J = IDW(x,y,z)
+function [loc_x,loc_y,z_s] = idw(x,y,z)
     p=2;    % power for weight function
     dx=1;   % dx different
     dy=1;   % dy different
@@ -28,8 +28,8 @@ function J = IDW(x,y,z)
             R=max(d);
             for k=1:length(d)
                 % function 1 for normal IDW, you can change it
-                % w1(k)=((1./d(k))^2)./(sum((1./d).^2));
-                w1(k)=(((R-d(k))./(R.*d(k)))^2)./(sum(((R-d)./(R*d)).^2));
+                % w1(k)=((1./d(k))^p)./(sum((1./d).^p));
+                w1(k)=(((R-d(k))./(R.*d(k)))^p)./(sum(((R-d)./(R*d)).^p));
             end
         if(z_s(i,j)==0)
             z_s(i,j)=sum(z.*w1');
