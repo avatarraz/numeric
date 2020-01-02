@@ -6,6 +6,7 @@
 
 home = fileparts(which(mfilename));
 addpath(fullfile(home),'interpolation_[spatial]');
+addpath(fullfile(home),'linier_equation');
 %addpath(fullfile(home, 'cdm'));
 
 warning on
