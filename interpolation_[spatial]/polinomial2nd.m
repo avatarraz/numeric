@@ -1,5 +1,5 @@
 % polinomia 1st order function by A.S.Munir
-function J = polinomial2nd(x,y,z)
+function [loc_x,loc_y,z_s] = polinomial2nd(x,y,z)
     % parameter used, could be changged
     % x,y,z normalized value, 1 is unset, below 1 made value smaller,
     % above one made value bigger, only effect for calculation
